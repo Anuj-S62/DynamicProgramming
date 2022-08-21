@@ -46,15 +46,16 @@ int lcsTopDown(string a,string b){
 } 
 
 
+int shortestCommonSupersequence(string a,string b){
+    int common = lcsTopDown(a,b);
+    return a.length() + b.length() - common;
+}
+
+
 int main(){
-    // string s1 = "acbbbabbeadaadadbaebadceebaabdaedbaedddcdbabaaedddedeeeacacdaccdbeaeddcdeebbeaaebbdcccceebdcdccecebccaceeecabcaebdbdcaaebabacabbacaecdddebeaaeabedcdbccceaebbbadaacaabdbceceaedeeaaaecaddebbcdedbbabedddacdadbaedaaceacebaceebcaacdbcdaccddcbaceccddecdacabdeddbceccccbccbedbbcaacebeeccbacabbddcbcbaeddaddebdeeaaacbeedababeebdceacadccdbbcedbbabdcdeaddaeebcdddddddadedbdeebbccbbabbabdbaceaacaddbbbcecaeebcbadcdbadcacacbaaddadebebbcdcbbeebcdbedcdaeadaddabdecaaadcdaaebecdceecdadcabedbeebabdbdbdbdbceacaadbebbcdcaccddcaeadceccccdccbeebcaaaeaddccabaebbabdbdbabecacdbdcbbccdcaaebbcaedcbcabadebaeebacdeadddaebcaeececacbcdbaaddbceebedecdcacaceadceaedebdaedacacdebceacceeaadecbdbdcecbeaadaedaccbbdddaeeaeccbaceeaaddadadeedbbcecacdabeddccbeebdbdcedcedddbebddbacbbeabeedaecbeecdaababeaebcabaaebddbecdceccbbbacdadddeedadacdadbededacdbbaeadecbaacaebdcbdbbbecccbaebaacaacaeecbbecdccaaddbecdbebdaceaabaeccbbdcccaecceaacb";
-    // string s2 = s1;
-    // reverse(s2.begin(),s2.end());
-    // cout<<solve(s1,s2);
-    string a = "abdecj";
-    string b = "avbtdj";
-    cout<<solve(a,b)<<endl;
-    cout<<lcsTopDown(a,b)<<endl;
- 
+    string a = "aggtab";
+    string b = "gxtxayb";
+    cout<<shortestCommonSupersequence(a,b)<<endl;
+    
     return 0;
 }
